@@ -1,0 +1,53 @@
+<div class="table-padding">
+  <div *ngIf="data?.length > 0">
+    <div class="table-header-border">
+      <app-list-item [item]="tableHeader"
+        [columns]="config.columns"
+        [align]="config?.align"
+        [header]="true"></app-list-item>
+    </div>
+    <div *ngFor="let item of data; let itemIndex = index"
+      [ngClass]="getItemClass(itemIndex)">
+      <app-list-item *ngIf="isDisplayed(itemIndex)"
+        [item]="item"
+        [columns]="config.columns"
+        [align]="config?.align"></app-list-item>
+    </div>
+  </div>
+  <div *ngIf="!data || data?.length == 0"
+    class="item-border">
+    <app-list-item [item]="notFound.item"
+      [columns]="notFound.columns"
+      align="right"></app-list-item>
+  </div>
+
+
+  <div *ngIf="data?.length > 0"
+    class="separated-elements">
+    <div class="padding">
+      <span class="bold-font">
+        Showing:
+      </span>
+      <span class="bold-font">
+        {{getCurrentlyShownCount()}}
+      </span>
+    </div>
+    <div>
+      <button class="custom-page-button"
+        [ngClass]="currentPage == 1 ? 'disabled-button' : ''"
+        [disabled]="currentPage == 1"
+        (click)="setPage(currentPage - 1)">
+        Previous
+      </button>
+      <span>
+        {{getPage()}}
+      </span>
+      <button class="custom-page-button"
+        [ngClass]="getPagesCount() == currentPage ? 'disabled-button' : ''"
+        [disabled]="getPagesCount() == currentPage"
+        (click)="setPage(currentPage + 1)">
+        Next
+      </button>
+    </div>
+  </div>
+</div>

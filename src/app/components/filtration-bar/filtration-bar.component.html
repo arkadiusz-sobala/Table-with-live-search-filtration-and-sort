@@ -1,0 +1,26 @@
+<div class="one-row filtration-bar-background space-between">
+    <div class="one-row">
+        <div *ngFor="let select of selects; let selectIndex = index">
+            <app-custom-select [config]="select"
+                [(chosenValue)]="select.chosenValue"
+                (change)="changeFiltration($event, selectIndex)"></app-custom-select>
+        </div>
+    </div>
+
+    <div class="one-row">
+        <div *ngIf="clearButton"
+            class="right-buttons"
+            (click)="clearFiltration()">
+            <i class="fa fa-times-circle"></i>
+            <span class="left-padding">Clear</span>
+        </div>
+        <div *ngIf="sortDirectionButton"
+            class="right-buttons sort-icon"
+            (click)="changeSortDirection()">
+            <i *ngIf="sortDirection == 'desc'"
+                class="fa fa-sort-amount-desc transform-icon-desc"></i>
+            <i *ngIf="sortDirection == 'asc'"
+                class="fa fa-sort-amount-asc transform-icon-asc"></i>
+        </div>
+    </div>
+</div>

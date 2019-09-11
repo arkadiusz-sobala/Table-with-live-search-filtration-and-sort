@@ -1,0 +1,39 @@
+.main-backgroud {
+  padding: 20px 50px;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.dark-background {
+  background-color: #2f2f2f;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.live-search-width {
+  width: 30%;
+}
+
+.filtration-bar-height {
+  height: 10%;
+  margin-bottom: 1px;
+}
+
+.auto-overflow {
+  overflow: auto;
+}
+
+.card-static-height {
+  height: calc(100vh - 40px);
+}
+
+.list-view-static-height {
+  height: calc(90vh - 98px);
+}
+
+.grid-display {
+  display: grid;
+  overflow: visible;
+}

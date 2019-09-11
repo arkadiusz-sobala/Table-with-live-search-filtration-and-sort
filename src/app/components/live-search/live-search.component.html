@@ -1,0 +1,8 @@
+<div class="input-group">
+  <input type="text"
+    class="form-control"
+    [value]="searchValue"
+    [placeholder]="placeholder"
+    (input)="emitSearchChange($event)">
+  <span class="input-group-addon icon-color"><i class="fa fa-search"></i></span>
+</div>

@@ -1,0 +1,12 @@
+<div class="one-row">
+  <div *ngFor="let column of columns; let columnIndex = index"
+    [ngClass]="getColumnClass(columnIndex)">
+    <div [ngClass]="getAlignClass()">
+      <span *ngIf='!column.pipe && !header'>{{ item[column.name] }}</span>
+      <span *ngIf="column.pipe == 'date' && !header">{{ item[column.name] | date: column.datePipe }}</span>
+
+      <span *ngIf='header'
+        class="header-item">{{ item[column.name] }}</span>
+    </div>
+  </div>
+</div>

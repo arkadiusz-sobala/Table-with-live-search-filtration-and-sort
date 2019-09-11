@@ -1,0 +1,32 @@
+<div class="main-backgroud">
+  <div class="panel panel-default no-margin card-static-height">
+    <div class="panel-heading dark-background">
+      <div class="live-search-width">
+        <app-live-search #liveSearchComponent
+          *ngIf="liveSearchConfig"
+          [placeholder]="liveSearchConfig.placeholder"
+          (searchChange)="changeSearchParameter($event)"></app-live-search>
+      </div>
+    </div>
+    <div class="auto-overflow grid-display">
+      <div class="filtration-bar-height">
+        <app-filtration-bar #filtrationBarComponent
+          *ngIf="filtrationBarConfig"
+          [clearButton]="filtrationBarConfig.clearButton"
+          [sortDirectionButton]="filtrationBarConfig.sortDirectionButton"
+          [sortDirection]="filtrationBarConfig.sortDirection"
+          [selects]="filtrationBarConfig.selects"
+          (clear)="clearFiltration()"
+          (filtrationChange)="changeFiltration($event)"
+          (sortDirectionChange)="changeSortDirection($event)"></app-filtration-bar>
+      </div>
+      <div class="auto-overflow list-view-static-height">
+        <app-list-view #listViewComponent
+          *ngIf="listViewData && listViewConfig"
+          [config]="listViewConfig"
+          [(data)]="listViewData"> </app-list-view>
+      </div>
+
+    </div>
+  </div>
+</div>

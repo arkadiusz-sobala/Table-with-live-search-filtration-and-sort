@@ -1,0 +1,48 @@
+.table-padding {
+  padding: 10px 80px 40px;
+}
+
+.table-header-border {
+  border: solid 2px #b9b9b9;
+  border-bottom: solid 1px #b9b9b9;
+}
+
+.item-border {
+  border: solid 1px #b9b9b9;
+}
+
+.no-bottom-border {
+  border-bottom: none;
+}
+
+.separated-elements {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.bold-font {
+  font-weight: 600;
+  padding: 5px;
+}
+
+.padding {
+  padding: 10px 5px;
+}
+
+.custom-page-button {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+  transition: 200ms;
+}
+
+.custom-page-button:hover {
+  background-color: rgb(233, 233, 233);
+  cursor: pointer;
+}
+
+.disabled-button {
+  color: rgb(153, 153, 153);
+}

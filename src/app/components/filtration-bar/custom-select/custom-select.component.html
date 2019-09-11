@@ -1,0 +1,31 @@
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle custom-button-layout"
+    type="button"
+    id="dropdownMenu1"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="true">
+    <div class="placeholder-container">
+      <span class="placeholder">{{value}}</span>
+      <span class="chosen-value"> {{getChosenValueDisplayValue()}} </span>
+    </div>
+    <span class="caret"></span>
+  </button>
+
+  <ul class="dropdown-menu custom-menu">
+    <li *ngFor="let value of config.values; let valueIndex = index"
+      [ngClass]="valueIndex != config.values.length - 1 ? 'bottom-line' : ''"
+      (click)="changeChosenValue(value.value)">
+      <a href="#"
+        class="custom-element">
+        <div class="label-and-icon">
+          <span [ngClass]="chosenValue == value.value ? 'greyed-out-text' : ''">
+            {{value.displayValue}}
+          </span>
+          <i *ngIf="chosenValue == value.value"
+            class="fa fa-check check-icon"></i>
+        </div>
+      </a></li>
+
+  </ul>
+</div>

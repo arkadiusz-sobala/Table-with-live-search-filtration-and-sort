@@ -1,0 +1,33 @@
+.one-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.column {
+  width: 100%;
+  padding: 8px 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #565656;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.right-border {
+  border-right: solid 1px #b9b9b9;
+}
+
+.header-item {
+  font-weight: 700;
+  font-size: 20px;
+}

@@ -1,0 +1,67 @@
+.dropdown {
+  position: relative;
+}
+
+.custom-button-layout {
+  min-height: 10vh;
+  min-width: 13vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  border-top: none;
+  border-left: none;
+  border-radius: 0px;
+  background-color: #ececec;
+}
+
+.custom-menu {
+  margin: 0px;
+  width: 100%;
+  border-radius: 0px;
+  border-top: none;
+  padding: 0px;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.custom-element {
+  padding: 15px 30px;
+  font-size: 18px;
+}
+
+.check-icon {
+  color: rgb(2, 168, 2);
+}
+
+.bottom-line {
+  border-bottom: solid 1px #d8d8d8;
+}
+
+.label-and-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.placeholder-container {
+  display: grid;
+  text-align: left;
+}
+
+.placeholder {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.chosen-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f55042;
+}
+
+.greyed-out-text {
+  color: grey;
+}
