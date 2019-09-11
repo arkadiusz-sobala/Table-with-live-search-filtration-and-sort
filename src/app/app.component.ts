@@ -60,8 +60,6 @@ export class AppComponent implements OnInit {
   }
 
   getInitialData() {
-    console.log(this.data);
-
     this.listViewData = this.data.slice();
   }
 
